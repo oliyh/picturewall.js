@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>picturewall.js demo</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=iso-8859-1"/>
+		<meta name="keywords" content="picturewall.js, canvas, html5, gallery, photo, picture"/>
+		<meta name="description" content="picturewall.js demo"/>
+
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"> </script>
+		<script src="picturewall.js" type="text/javascript"> </script>
+	</head>
+
+	<body>
+		<h1>picturewall.js demo</h1>
+		<a name="#wall">
+			<div id="controls" style="display: none; position: absolute; z-index: 110; left: 50%; width: 400px; margin-left: -200px;">
+				<a class="btn btn-danger btn-mini" id="playPause" href="javascript:playPause()"><i class="icon-pause"></i> <span>Pause</span></a>
+				<a class="btn btn-info btn-mini" id="fullScreen" href="#wall" onclick="javascript:enterFullScreen()"><i class="icon-fullscreen"></i> <span>Full screen</span></a>
+			</div>
+			<div id="wall">
+				<canvas id="myCanvas" style="position: absolute; z-index: 100; margin-top: 30px;">
+					<div class="alert alert-block" style="margin-top: 20px;">
+						<h4 class="alert-heading">Error!</h4>
+						Your browser does not support the HTML5 Canvas element. You need to use a more modern browser such as Firefox, Chrome or IE9.
+					</div>
+				</canvas>
+			</div>
+		</a>
+
+		<script type='text/javascript'>
+			picturewall('myCanvas');
+		</script>
+	</body>
+</html>
